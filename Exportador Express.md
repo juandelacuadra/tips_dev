@@ -53,7 +53,7 @@ Pasamos la información a servidor por URL, hay dos opciones:
             SELECT 
                 * 
             FROM 
-                bd_viki.NOMBRE_DE_LA_TABLA
+                bd_seleccionada.NOMBRE_DE_LA_TABLA
             WHERE 
                 DATE(cts) BETWEEN '" . $fecha_desde . "' AND '" . $fecha_hasta . "'";
             ";
@@ -65,7 +65,7 @@ Pasamos la información a servidor por URL, hay dos opciones:
         header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");
 
         // === AQUI SE NOMBRA EL ARCHIVO DESCARGABLE === //
-        $_archivo = "NOMBRE_DEL_INFORME_" . $hoy . '_viki.xls';
+        $_archivo = "NOMBRE_DEL_INFORME_" . $hoy . '.xls';
                 
         header("Last-Modified: " . gmdate("D,d M YH:i:s") . " GMT");
         header("Cache-Control: no-cache, must-revalidate");
